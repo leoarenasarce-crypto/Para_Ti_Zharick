@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-top: #1d2532;
+    --bg-bottom: #0f1319;
+    --paper: #232c3a;
+    --paper-edge: #364154;
+    --ink: #ece8df;
+    --glow: rgba(214, 190, 150, 0.10);
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    background: var(--bg-bottom);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 16px 64px;
+    color: var(--ink);
+    font-family: "Lora", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    background:
+      radial-gradient(ellipse 80% 45% at 50% 0%, var(--glow), transparent 70%),
+      linear-gradient(180deg, var(--bg-top), var(--bg-bottom) 70%);
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  /* Textura de papel muy tenue */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  main {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .recuadro {
+    position: relative;
+    background: var(--paper);
+    border: 1px solid var(--paper-edge);
+    border-radius: 6px;
+    padding: 34px 26px 38px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Doble filo interior, como el borde de un papel de carta */
+  .recuadro::before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(236, 232, 223, 0.08);
+    border-radius: 3px;
+    pointer-events: none;
+  }
+
+  .recuadro p {
+    position: relative;
+    margin: 0 0 1.35em;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    overflow-wrap: break-word;
+    hyphens: manual;
+  }
+
+  .recuadro p:last-child { margin-bottom: 0; }
+
+  @media (min-width: 600px) {
+    body { padding: 72px 24px 96px; }
+    .recuadro { padding: 52px 56px 56px; }
+    .recuadro p { font-size: 1.12rem; }
+    main { gap: 28px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <section class="recuadro">
+    <p>Hola Zharick, buenas noches</p>
+    <p>Ha pasado bastante tiempo de desde que hablamos, desde el comienzo quiero decirte que no necesitas responder, simplemente quería tener la oportunidad de despedirme, por que aún que no lo creas, he pensado esto desde hace meses, solo no tuve el valor de hacerlo, decidí hacerlo hoy por que... Hoy hace un año, 29/09/2025, fue cuando tú y yo empezamos a hablar por primera vez, quería hacerlo significativo, despedirme el mismo día en el que te conoci</p>
+  </section>
+
+  <section class="recuadro">
+    <p>Bien... Esta es como una carta de Leo, para ti Zharick, y lo hice como una página web para que Messenger no lo haga excesivamente grande para ti, y quizás parezca tonto, me despido de alguien a quien nunca llegue a ver en persona, y tal vez me veas como alguien raro Zharick, pero desde que te conocí, no hubo día alguno en el que no piense en ti, incluso si solo fue un instante al día... Hay ciertas cosas que quiero decirte, por que está será la última que te hablé, tal vez tú ya no recuerdas las cosas que hablamos, pero yo sí, recuerdo las promesas, las palabras, el cariño, tu comida favorita, tu cumpleaños, y como te decía que tú intensidad, tu sensibilidad, el como decías que te sonrojabas con lo que te decía, era... Lo más hermoso para mí, tus ojos, aquellos de los que me enamoré incluso antes de verlos si quisiera, habrían sido lo que habría amado toda la vida, tu para mí ya era real, mientras que yo... Solo soy el chico detrás de la pantalla, nunca pude verte, abrazarte o escuchar tu voz</p>
+    <p>No te mentí, cuando te dije que eras importante para mí, por que antes de conocerte, yo estaba pasando por un momento horrible, donde había perdido a alguien que creí que me amaba, y cuando por fin estaba sanando, cuando pude sanar sin la necesidad de reemplazar, apareciste tu, te conocí, y sentí... Que podría volver a amar, sin las cadenas del pasado, pero... Esta historia no funcionó, lo único que quedó entre tú y yo, solo fue posibilidad, una donde yo crei que sería algo real, no te culpo por no sentir lo mismo que yo, te dije que era intenso, pero no era intenso solo en palabras, si no también en lo que sentía, sabes? Si quieres antes de decirte que me gustaba, ya me imaginaba saliendo contigo, yendo a conocer lugares, a pasear a lugares tranquilos, comer tus comidas favoritas, pasar tiempo juntos, ya me estaba imaginando un futuro contigo, sin siquiera haber sido pareja antes jaja, supongo que fui yo quien se adelanto demasiado...</p>
+    <p>Y ahora... No te estaría escribiendo esta carta virtual, de no ser... Por que dentro de mi corazón aún eres importante para mí, aún sigo pensando que tús ojos, son los más hermoso, incluso si tú no lo ves así, para mí si lo son, y espero que... Nunca estés sola, pronto terminarás tu carrera y realmente de corazón, deseo todo lo mejor para ti y tu futuro Zharick, al verte tan adelante, yo siento el deseo de querer ser mejor y no quedarme atrás, no se como estarás, pero espero que... Estés bien, y también espero... Que si tienes novio o más adelante lo tendrás, espero realmente que el te cuide, te valore, te sea leal y siempre... Siempre se quede a tu lado incluso hasta en los momentos más horribles, que te ame incluso con las partes oscuras que tienes, por que es lo que yo habría hecho, lo recuerdas? Tu serías el libro que yo leería incluso con sus hojas y momentos más oscuros y difíciles... y que también... El chico con quién llegues a estar, se sienta el más afortunado, de tener a una chica tan especial y maravillosa como lo eres tú Zharick, realmente... Me habría sentido tan feliz y afortunado de tener a alguien como tú a mi lado, pero... Por más que te quisiera, yo no podía obligarte a quererme o amarme, de la misma forma en lo que yo lo hacía contigo, el amor no se obliga, no? Lo único que puedo hacer como último acto de amor o cariño... Es decirte por última lo importante y especial que fuiste para mí, y que el amor que sentí por ti fue sincero y real, antes de despedirme para siempre, y me siento tonto la verdad... Por enamorarme con tanta fuerza de alguien a quien... Ni siquiera llegue a ver a persona, pero lo hice me enamoré de ti Zharick, y no me arrepiento, y ahora quiero despedirme de ti... Todo esto que te dije fue largo, y no se siquiera si lo leerás hasta aquí, por que no esperare una respuesta, por que por eso lo llamo "despedida", si supieras que muchas veces pasaba cerca de la unifranz con esa pequeña esperanza... De que quizás te vea por casualidad, y ahora, te eliminaré de mi Facebook, y cualquier social, pero ahora eres una persona importante en mi corazón, pero quien ahora solo vive en mi pasado</p>
+    <p>Realmente... Gracias Zharick, aún que no lo creas, al menos contigo pude sentir... Que a pesar de haber atravesado un gran dolor, aún podía amar, todo esto que te dije es largo... Pero es por que será la última vez que te hablé, trate de decirte todo lo que sentía, y si llegaste a leer hasta aquí... Yo, realmente te agradezco mucho, yo aún siento esa mínima esperanza de que aún podría existir algo entre tú y yo, pero... Es mejor no meterle más madera a una fogata que ya no tiene motivos para seguir encendida, ysolo dejar que se apague con el cariño y las promesas que alguna vez existió, y dejarte ir realmente de mi vida aún que dejaste de estar presente hace muchos meses...</p>
+    <p>Adiós Zharick, por más que fuera solo por chat, realmente tu si fuiste importante en mi vida...</p>
+    <p>Te lo decía con ese cariño y amor, el chico detrás de la pantalla, Leo</p>
+    <p>Adiós Zharick, mucha suerte en tus metas y ojalá se te cumplan cualquier cosa bonita que pidas 🫂❤️‍🩹</p>
+  </section>
+
+</main>
+</body>
+</html>
